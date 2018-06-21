@@ -26,7 +26,6 @@ import MapKit
 import CoreLocation
 
 class ViewController: UIViewController {
-
     let manager = CLLocationManager()
     let addressMarker = AddressMarkerView(frame: .zero)
 
@@ -42,8 +41,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = .darkGray
         view.addSubview(mapView)
+
         mapView.delegate = self
 
         manager.delegate = self
@@ -60,6 +60,7 @@ class ViewController: UIViewController {
     private func createAnnotation() {
         view.addSubview(addressMarker)
         view.bringSubview(toFront: addressMarker)
+        addressMarker.isHidden = true
     }
 }
 
@@ -77,6 +78,22 @@ extension ViewController: CLLocationManagerDelegate {
             let span = MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)
             let region = MKCoordinateRegion(center: mostRecentLocation.coordinate, span: span)
             mapView.setRegion(region, animated: true)
+        }
+    }
+
+    // If authorization alert is not acted upon immediately
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            manager.requestLocation()
+            UIView.animate(withDuration: 0.5) {
+                self.addressMarker.isHidden = false
+            }
+        } else {
+            let alert = UIAlertController(title: "Womp",
+                                          message: "This app needs location authorization to perform the reverse geolocation",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            present(alert, animated: true)
         }
     }
 
@@ -140,14 +157,23 @@ extension ViewController: MKMapViewDelegate {
             }
 
             // We are going to build the address string as we parse the placemark
-            // This is a slightly addvanced technique for string building
             // -> If the placemark has x property, add that to the address, if it doesn't add nothing
             var address = ""
-            address += "\(first.subThoroughfare ?? "")"
-            address += " \(first.thoroughfare ?? "").\n"
-            address += "\(first.locality ?? ""),"
-            address += " \(first.administrativeArea ?? "")."
-            address += " \(first.postalCode ?? "")"
+            if let subThoroughfare = first.subThoroughfare {
+                address.append("\(subThoroughfare) ")
+            }
+            if let thoroughfare = first.thoroughfare {
+                address.append("\(thoroughfare).\n")
+            }
+            if let locality = first.locality {
+                address.append("\(locality), ")
+            }
+            if let administrativeArea = first.administrativeArea {
+                address.append("\(administrativeArea). ")
+            }
+            if let postalCode = first.postalCode {
+                address.append("\(postalCode)")
+            }
             completion(address)
         }
     }
