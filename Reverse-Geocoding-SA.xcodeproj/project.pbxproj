@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9817E3D20DA0C0700A6CB78 /* AddressMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9817E3C20DA0C0700A6CB78 /* AddressMarkerView.swift */; };
+		C9817E3F20DB1D3F00A6CB78 /* ViewController+HouseKeeping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9817E3E20DB1D3F00A6CB78 /* ViewController+HouseKeeping.swift */; };
 		C99D71EB20D9F7A600A1E156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99D71EA20D9F7A600A1E156 /* AppDelegate.swift */; };
 		C99D71ED20D9F7A600A1E156 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99D71EC20D9F7A600A1E156 /* ViewController.swift */; };
-		C99D71F020D9F7A600A1E156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99D71EE20D9F7A600A1E156 /* Main.storyboard */; };
 		C99D71F220D9F7AA00A1E156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99D71F120D9F7AA00A1E156 /* Assets.xcassets */; };
-		C99D71F520D9F7AA00A1E156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99D71F320D9F7AA00A1E156 /* LaunchScreen.storyboard */; };
+		C99D71FD20D9F97A00A1E156 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99D71FC20D9F97A00A1E156 /* Launch Screen.storyboard */; };
+		C9EE7CC720DB2751003C2F2F /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9EE7CC620DB273A003C2F2F /* Muli-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9817E3C20DA0C0700A6CB78 /* AddressMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMarkerView.swift; sourceTree = "<group>"; };
+		C9817E3E20DB1D3F00A6CB78 /* ViewController+HouseKeeping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+HouseKeeping.swift"; sourceTree = "<group>"; };
 		C99D71E720D9F7A600A1E156 /* Reverse-Geocoding-SA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse-Geocoding-SA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99D71EA20D9F7A600A1E156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C99D71EC20D9F7A600A1E156 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C99D71EF20D9F7A600A1E156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C99D71F120D9F7AA00A1E156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C99D71F420D9F7AA00A1E156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C99D71F620D9F7AA00A1E156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C99D71FC20D9F97A00A1E156 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C9EE7CC620DB273A003C2F2F /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9817E3B20DA0BC800A6CB78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9817E3E20DB1D3F00A6CB78 /* ViewController+HouseKeeping.swift */,
+				C9817E3C20DA0C0700A6CB78 /* AddressMarkerView.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C99D71DE20D9F7A600A1E156 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +67,23 @@
 		C99D71E920D9F7A600A1E156 /* Reverse-Geocoding-SA */ = {
 			isa = PBXGroup;
 			children = (
+				C9EE7CC520DB271A003C2F2F /* Fonts */,
+				C9817E3B20DA0BC800A6CB78 /* Supporting Files */,
 				C99D71EA20D9F7A600A1E156 /* AppDelegate.swift */,
 				C99D71EC20D9F7A600A1E156 /* ViewController.swift */,
-				C99D71EE20D9F7A600A1E156 /* Main.storyboard */,
 				C99D71F120D9F7AA00A1E156 /* Assets.xcassets */,
-				C99D71F320D9F7AA00A1E156 /* LaunchScreen.storyboard */,
 				C99D71F620D9F7AA00A1E156 /* Info.plist */,
+				C99D71FC20D9F97A00A1E156 /* Launch Screen.storyboard */,
 			);
 			path = "Reverse-Geocoding-SA";
+			sourceTree = "<group>";
+		};
+		C9EE7CC520DB271A003C2F2F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C9EE7CC620DB273A003C2F2F /* Muli-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +144,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C99D71F520D9F7AA00A1E156 /* LaunchScreen.storyboard in Resources */,
+				C9EE7CC720DB2751003C2F2F /* Muli-SemiBold.ttf in Resources */,
+				C99D71FD20D9F97A00A1E156 /* Launch Screen.storyboard in Resources */,
 				C99D71F220D9F7AA00A1E156 /* Assets.xcassets in Resources */,
-				C99D71F020D9F7A600A1E156 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,29 +159,12 @@
 			files = (
 				C99D71ED20D9F7A600A1E156 /* ViewController.swift in Sources */,
 				C99D71EB20D9F7A600A1E156 /* AppDelegate.swift in Sources */,
+				C9817E3D20DA0C0700A6CB78 /* AddressMarkerView.swift in Sources */,
+				C9817E3F20DB1D3F00A6CB78 /* ViewController+HouseKeeping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C99D71EE20D9F7A600A1E156 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C99D71EF20D9F7A600A1E156 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C99D71F320D9F7AA00A1E156 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C99D71F420D9F7AA00A1E156 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C99D71F720D9F7AA00A1E156 /* Debug */ = {
@@ -213,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
