@@ -18,7 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = ViewController()
+        let rootVC = UINavigationController(rootViewController: ViewController())
+        rootVC.navigationBar.isTranslucent = false
+        rootVC.navigationBar.backgroundColor = .white
+
+        window?.rootViewController = rootVC
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: UIColor.init(red: 231/255,
+                                                                green: 60/255,
+                                                                blue: 60/255,
+                                                                alpha: 1)
+        ]
 
         UIApplication.shared.statusBarStyle = .default
         return true

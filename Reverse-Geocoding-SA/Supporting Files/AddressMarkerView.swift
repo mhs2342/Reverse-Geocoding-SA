@@ -15,6 +15,7 @@ class AddressMarkerView: UIView {
     let viewPadding: CGFloat = 5
     let activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
+        view.activityIndicatorViewStyle = .gray
         view.hidesWhenStopped = true
         view.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -25,7 +26,7 @@ class AddressMarkerView: UIView {
     let labelContainer: UIView = {
         let container = UIView()
         container.layer.cornerRadius = 5
-        container.backgroundColor = UIColor.darkGray
+        container.backgroundColor = .white
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
@@ -40,7 +41,7 @@ class AddressMarkerView: UIView {
             """)
         }
         label.font = customFont
-        label.textColor = .white
+        label.textColor = .darkText
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -68,9 +69,9 @@ class AddressMarkerView: UIView {
         // allow users to "touch through" the view and drag map around
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
-        labelContainer.layer.borderColor = UIColor.init(red: 97/255,
-                                                        green: 161/255,
-                                                        blue: 168/255,
+        labelContainer.layer.borderColor = UIColor.init(red: 231/255,
+                                                        green: 60/255,
+                                                        blue: 60/255,
                                                         alpha: 1).cgColor
         labelContainer.layer.borderWidth = 2
         labelContainer.addSubview(addressLabel)
@@ -122,8 +123,6 @@ extension AddressMarkerView {
             addressLabel.leadingAnchor.constraint(equalTo: labelContainer.leadingAnchor, constant: viewPadding),
             addressLabel.trailingAnchor.constraint(equalTo: labelContainer.trailingAnchor, constant: -viewPadding),
             addressLabel.topAnchor.constraint(equalTo: labelContainer.topAnchor, constant: viewPadding),
-            addressLabel.bottomAnchor.constraint(equalTo: labelContainer.bottomAnchor),
-
             markerImage.centerXAnchor.constraint(equalTo: centerXAnchor),
             markerImage.bottomAnchor.constraint(equalTo: bottomAnchor),
 

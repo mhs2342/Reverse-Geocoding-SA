@@ -41,7 +41,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .darkGray
+        title = "Reverse Geocoding"
+        view.backgroundColor = .white
         view.addSubview(mapView)
 
         mapView.delegate = self
@@ -94,6 +95,7 @@ extension ViewController: CLLocationManagerDelegate {
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
             present(alert, animated: true)
+            manager.requestWhenInUseAuthorization()
         }
     }
 
