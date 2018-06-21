@@ -1,5 +1,4 @@
-# Reverse-Geocoding-SA# Reverse Geocoding Example
-
+# Reverse-Geocoding-SA
 Just a quick example of how reverse geocoding works with an interactive demonstration. The main purpose of this project is to teach others how to reverse geocode using Apple's MapKit and CoreLocation frameworks. 
 
 
