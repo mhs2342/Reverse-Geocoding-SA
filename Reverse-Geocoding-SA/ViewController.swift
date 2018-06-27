@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Reverse Geocoding"
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
         view.addSubview(mapView)
 
@@ -89,7 +90,7 @@ extension ViewController: CLLocationManagerDelegate {
             UIView.animate(withDuration: 0.5) {
                 self.addressMarker.isHidden = false
             }
-        } else {
+        } else if status == .denied  {
             let alert = UIAlertController(title: "Womp",
                                           message: "This app needs location authorization to perform the reverse geolocation",
                                           preferredStyle: .alert)
@@ -180,4 +181,3 @@ extension ViewController: MKMapViewDelegate {
         }
     }
 }
-
